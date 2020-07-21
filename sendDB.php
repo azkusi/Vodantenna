@@ -32,11 +32,11 @@ if (!$conn) {
 }
 
 // This is for debugging only, to confirm whether the database connection is successfull.
-echo "<p>Success: A working connection to MySQL was made!</p>";
-echo "<p>The database is: $dbname</p>";
-echo "<p>The host is: = $dbhost</p>";
-echo "<p>Host information: " . mysqli_get_host_info($conn) . "</p>";
-echo "<p>The database username is: $dbusername</p>";
+//echo "<p>Success: A working connection to MySQL was made!</p>";
+//echo "<p>The database is: $dbname</p>";
+//echo "<p>The host is: = $dbhost</p>";
+//echo "<p>Host information: " . mysqli_get_host_info($conn) . "</p>";
+//echo "<p>The database username is: $dbusername</p>";
 
 //=================================================================================
 //PLACING STRING OF DRAWN COORDINATES INTO DATABASE AND CONVERTING TO ARRAY OF INTEGERS
