@@ -804,8 +804,9 @@ function drawPropModel (){
 
         ajax.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                //var data = JSON.parse(this.responseText);
-                var midpoints = JSON.parse(JSON.stringify(this.responseText));
+                var data = this.responseText;
+                var StrippedString = data.replace(/(<([^>]+)>)/ig,"");
+                var midpoints = JSON.parse(JSON.stringify(StrippedString));
                 //var data = this.responseText;
                 console.log(midpoints, "\n");
                 console.log(typeof midpoints);
