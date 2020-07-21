@@ -22,9 +22,9 @@ foreach ($_SERVER as $key => $value) {
     $dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
 }
 
-$connection = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbname);
+$conn = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbname);
 
-if (!$connection) {
+if (!$conn) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
     echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
@@ -35,7 +35,7 @@ if (!$connection) {
 echo "<p>Success: A working connection to MySQL was made!</p>";
 echo "<p>The database is: $dbname</p>";
 echo "<p>The host is: = $dbhost</p>";
-echo "<p>Host information: " . mysqli_get_host_info($connection) . "</p>";
+echo "<p>Host information: " . mysqli_get_host_info($conn) . "</p>";
 echo "<p>The database username is: $dbusername</p>";
 
 //==============================================================================================
