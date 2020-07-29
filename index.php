@@ -733,16 +733,18 @@ function PropagationModel (){
                 drawImageScaled(img, context);
 
                 if (planWidth > planlength){
-                    radius = planWidth/2;
-                    pixelRadius = imageWidth/2;
+                    //change back to /2 if needed
+                    radius = planWidth;
+                    pixelRadius = imageWidth;
                     console.log("pixelRadius 1 is: ", pixelRadius);
                     console.log("imagewidth is: ", imageWidth);
 
                 }
 
                 else{
-                radius = planlength/2;
-                pixelRadius = imageHeight/2;
+                //change back to /2 if needed
+                radius = planlength;
+                pixelRadius = imageHeight;
                 console.log("pixelRadius 2 is: ", pixelRadius);
                 }
 
